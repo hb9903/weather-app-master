@@ -1,4 +1,6 @@
-
+body{
+  margin: 0;
+}
 
 .card {
   padding: 2em;
@@ -10,14 +12,18 @@
 
 .app-container {
   padding: 20px;
-  max-width: 800px;
   margin: 0 auto;
-  background:url("/public/day.jpg") no-repeat 50% 50%;
+  background: url("/public/day2.jpg") no-repeat 50% 50% / cover;
+  text-align: center;
+  height: 95.8vh;
+  display: flex;
+  align-items: center;
 }
 
 .app-title {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 20px;
 }
 
 .error-message {
@@ -31,4 +37,36 @@
 
 .fb{
   font-weight: 700;
+  font-size: 50px;
+  margin-top: 30px;
+}
+
+.frame {
+  background-color: rgb(255 255 255 / 30%);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 50px;
+  width: 760px;
+  margin: 0 auto;
+  color: #fff;
+}
+.info{
+  margin-top: 40px;
+}
+.city{
+  position: relative;
+  width: 220px;
+  margin: 16px auto 24px;
+  font-size: 14px;
+}
+.citytext{
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid #d3d7e0;
+  background: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

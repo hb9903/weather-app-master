@@ -34,7 +34,7 @@ const DateTimeDisplay = () => {
 
       {/* 요일 */}
       <span className="weekday">({weekday})</span>
-
+      <br/>
       {/* 시간 */}
       <span className="hour">{hour}</span>
       <span className="sep">:</span>

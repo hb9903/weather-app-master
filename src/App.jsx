@@ -103,33 +103,44 @@ function App() {
 
   return (
     <TimeThemeContainer>
-      <h1 className="app-title">날씨 앱 이름을 넣어주세요.</h1>
+      <div className="frame">
+        <h1 className="app-title">볼리</h1>
 
-      {/* 현재 날짜/요일/시간 표시 */}
-      <DateTimeDisplay />
+        {/* 현재 날짜/요일/시간 표시 */}
 
-      <Hello />
+        {/* <SearchBox onSearch={handleSearch} /> */}
+        <Hello />
 
-      <CityButtons
-        isOpen={isOpen}
-        toggleDropdown={toggleDropdown}
-        selectedCity={selectedCity}
-        onCityClick={handleCityClick}
-      />
+        <CityButtons
+          isOpen={isOpen}
+          toggleDropdown={toggleDropdown}
+          selectedCity={selectedCity}
+          onCityClick={handleCityClick}
+        />
 
-      <SearchBox onSearch={handleSearch} />
 
-      {error && <p className="error-message">{error}</p>}
+        {error && <p className="error-message">{error}</p>}
 
-      {weather ? (
-        <div className="weather-card">
-          <p className="weather-info">📍 <span className="fb">도시</span>: {searchCity}</p>
-          <p className="weather-info">🌡️ 온도: {weather.main.temp}°C</p>
-          <p className="weather-info">🌥️ 상태: {weather.weather[0].description}</p>
-        </div>
-      ) : (
-        <p className="loading-message">날씨 정보를 불러오는 중...</p>
-      )}
+        {weather ? (
+          <div className="weather-card fb">
+            {/* <p className="weather-info">📍 <span className="fb">도시</span>: {searchCity}</p> */}
+            <p className="weather-info">{weather.main.temp}°C</p>
+            {/* <p className="weather-info">🌥️ 상태: {weather.weather[0].description}</p> */}
+          </div>
+        ) : (
+          <p className="loading-message">날씨 정보를 불러오는 중...</p>
+        )}
+        <DateTimeDisplay />
+        {weather ? (
+          <div className="weather-card">
+            {/* <p className="weather-info">📍 <span className="fb">도시</span>: {searchCity}</p> */}
+            {/* <p className="weather-info">🌡️ 온도: {weather.main.temp}°C</p> */}
+            <p className="weather-info info">{weather.weather[0].description}</p>
+          </div>
+        ) : (
+          <p className="loading-message">날씨 정보를 불러오는 중...</p>
+        )}
+      </div>
     </TimeThemeContainer>
   );
 }

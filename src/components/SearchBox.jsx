@@ -12,12 +12,13 @@ function SearchBox({ onSearch }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="city">
       <input
         type="text"
         placeholder="도시명을 입력하세요 (예: Seoul)"
         value={city}
         onChange={(e) => setCity(e.target.value)}
+        className="citytext"
       />
       <button type="submit">
         검색
