@@ -70,3 +70,32 @@ body{
   align-items: center;
   justify-content: space-between;
 }
+
+@media (max-width:1460px){
+  html{
+    font-size: 18px;
+  }
+  .app-title {
+    font-size: 18px;
+  }
+  .fb{
+    font-size: 35px;
+  }
+  .city{
+    font-size: 10px;
+  }
+}
+@media (max-width:768px){
+  html{
+    font-size: 14px;
+  }
+  .app-title {
+    font-size: 14px;
+  }
+  .fb{
+    font-size: 25px;
+  }
+  .city{
+    font-size: 8px;
+  }
+}
